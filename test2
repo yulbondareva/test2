@@ -1,0 +1,24 @@
+
+//Программа для подкидывания монетки. Если выпадает подряд 3 раза орёл/решка, то выписать в консоль текст «Вы счастливчик!». 
+
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int coin = 1;
+        for (int i = 0; i < 3; i++) {
+            if (i == 0) {
+                coin = random.nextInt(0, 2);
+            }
+            if (i != 0) {
+                coin = random.nextInt(0,2);
+            }
+            if (i == 2) {
+                System.out.println("Вы счастливчик!");
+            }
+        }
+
+    }
+
+}
